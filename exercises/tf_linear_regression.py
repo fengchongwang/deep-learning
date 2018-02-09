@@ -22,15 +22,19 @@ optimizer = tf.train.AdamOptimizer(learning_rate = 0.1).minimize(calculate_cost(
     
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
-    for _epoch in range(5):
+    for _epoch in range(20):
         shuffled_indices = list(range(len(x)))
         shuffle(shuffled_indices)
         begin_ind = 0
         end_ind = begin_ind + batch_size
         while begin_ind < len(shuffled_indices):
-            print(begin_ind)
             sess.run(optimizer, feed_dict = {X: x[min(begin_ind, end_ind - batch_size):end_ind,None], Y: y[min(begin_ind, end_ind - batch_size):end_ind,None]})
             cost = sess.run(calculate_cost(Y, X, W, B), feed_dict = {X: x[min(begin_ind, end_ind - batch_size):end_ind,None], Y: y[min(begin_ind, end_ind - batch_size):end_ind,None]})
-            print(cost)
+            weight, bias = sess.run([W,B])
+            print(weight)
+            print(bias)
             begin_ind = end_ind
             end_ind = min(len(shuffled_indices), end_ind + batch_size) 
+    weight, bias = sess.run([W,B])
+    print(weight)
+    print(bias)
