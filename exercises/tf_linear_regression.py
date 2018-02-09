@@ -1,7 +1,7 @@
 from random import shuffle
 import tensorflow as tf
 import numpy as np
-from pytz.tzinfo import _epoch
+
 tf.reset_default_graph()
 lr = 0.01
 x = np.arange(-1, 100, 0.01)
