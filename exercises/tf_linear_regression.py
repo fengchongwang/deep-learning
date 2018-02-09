@@ -1,6 +1,7 @@
 from random import shuffle
-import tensorflow as tf
+
 import numpy as np
+import tensorflow as tf
 
 tf.reset_default_graph()
 lr = 0.01
