@@ -1,3 +1,8 @@
+"""
+A linear regression learning algorithm example using TensorFlow.
+Author: Wang
+"""
+
 from random import shuffle
 
 import numpy as np
