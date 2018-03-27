@@ -25,3 +25,5 @@ dog-project/__pycache__/
 dog-project/__MACOSX/
 dog-project/.gitignore.swp
 tv-script-generation/__pycache__/
+tv-script-generation/checkpoint
+tv-script-generation/save*
