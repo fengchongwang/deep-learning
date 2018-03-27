@@ -34,5 +34,26 @@ Reference:
 ### Filter Bias Initialization
 Initialize bias to be 0.
 
+### Hyperparameter Selection
+* use ELU non-linearity without batchnorm or ReLU with it.
+* apply a learned colorspace transformation of RGB.
+* use the linear learning rate decay policy.
+* use a sum of the average and max pooling layers.
+* use mini-batch size around 128 or 256. If this is too big for your GPU,
+decrease the learning rate proportionally to the batch size.
+* use fully-connected layers as convolutional and average the predictions for
+the final decision.
+* when investing in increasing training set size, check if a plateau has not
+been reach.
+* cleanliness of the data is more important then the size.
+* if you cannot increase the input image size, reduce the stride in the consequent
+layers, it has roughly the same effect.
+* if your network has a complex and highly optimized architecture, like e.g.
+GoogLeNet, be careful with modifications.
+
+Reference:
+
+* Systematic evaluation of CNN advances on the ImageNet by Dmytro Mishkin, Nikolay Sergievskiy, Jiri Matas, 2016 (<https://arxiv.org/abs/1606.02228>)
+
 ## Good Sources
 * Kaggle winner's interview: <http://blog.kaggle.com/>

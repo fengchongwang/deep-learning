@@ -19,9 +19,9 @@ face_generation/data/
 dog-project/.DS_Store
 dog-project/dogImages/
 dog-project/lfw/
-dog-project/saved_models/
 dog-project/.ipynb_checkpoints/
 dog-project/bottleneck_features/
 dog-project/__pycache__/
 dog-project/__MACOSX/
 dog-project/.gitignore.swp
+tv-script-generation/__pycache__/
